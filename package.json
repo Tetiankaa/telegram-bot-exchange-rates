@@ -1,0 +1,29 @@
+{
+  "name": "telegram-bot-exchange-rates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/main.js",
+    "start:dev": "rimraf dist && tsc-watch --onSuccess \"npm run watch:server\"",
+    "watch:server": "nodemon --exec ts-node src/main.ts",
+    "tunnel": "lt --port 4000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "localtunnel": "^2.0.2",
+    "nodemon": "^3.1.7",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}
